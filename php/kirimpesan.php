@@ -16,9 +16,9 @@ curl_close($ch);
 var_dump($api);
 
 //kalau pakai fungsi!
-function sendMessage($chatid, $pesant, $token) {
-    $url = "https://api.telegram.org/" . $secret_token . "/sendMessage?parse_mode=markdown&chat_id=" . $telegram_id;
-    $url = $url . "&text=" . urlencode($message_text);
+function kirimPesan($chatid, $pesan, $token) {
+    $url = "https://api.telegram.org/" . $token . "/sendMessage?parse_mode=markdown&chat_id=" . $chatid;
+    $url = $url . "&text=" . urlencode($pesan);
     $ch = curl_init();
     $optArray = array(
             CURLOPT_URL => $url,
@@ -28,3 +28,15 @@ function sendMessage($chatid, $pesant, $token) {
     $result = curl_exec($ch);
     curl_close($ch);
 }
+
+//jika handle dari form 
+//<form method="POST" action="kirimpesan.php">
+//$pesan = $_POST ['pesan'];
+//$token  = "?" 
+//$chatid = $_POST ['chatid'];
+    
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+   kirimPesan($chatid, $pesan, $token);
+}
+
+
