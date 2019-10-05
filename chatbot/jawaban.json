@@ -1,0 +1,21 @@
+{
+  "update_id": 762250608,
+  "message": {
+    "message_id": 355,
+    "from": {
+      "id": 403611573,
+      "is_bot": false,
+      "first_name": "Irfnrdh",
+      "username": "irfnrdh",
+      "language_code": "id"
+    },
+    "chat": {
+      "id": 403611573,
+      "first_name": "Irfnrdh",
+      "username": "irfnrdh",
+      "type": "private"
+    },
+    "date": 1570163665,
+    "text": "Jangan pergi dulu"
+  }
+}
